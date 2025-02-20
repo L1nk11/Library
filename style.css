@@ -41,7 +41,6 @@ body {
 
 .main {
     display: flex;
-    
     padding: 20px;
     height: 100%;
     width: 100%;
@@ -56,18 +55,47 @@ body {
     border: 1px solid black;
 }
 
+.main .bookList .cell div#header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
 .main .bookList .cell {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
+    background-color: white;
+    font-weight: bolder;
 }
 
 .main .bookList .cell div {
     border: 1px solid black;
+    padding: 0px 2px;
 }
 
-.main .bookList .cell div#header {
-    display: flex;
-    justify-content: center;
+.main .bookList .cell div button {
+    font-weight: bolder;
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
 }
+
+.main .bookList .cell .remove {
+    padding: 0px;
+}
+
+.main .bookList .cell .remove button{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.main .bookList .cell .remove button:hover {
+    background-color: rgba(255, 0, 0, 0.50);
+}
+
+.main .bookList .cell .read {
+    padding: 0px;
+}
+
 
