@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2%;
+    line-height: 0px;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    background-color: white;
+}
+
+.header button {
+    background-color: rgba(0, 0, 0, 0.10);
+    border: none;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    border-radius: 25px;
+}
+
+.header button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Body */
+
+.main {
+    display: flex;
+    
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.main .bookList {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 1px solid black;
+}
+
+.main .bookList .cell {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.main .bookList .cell div {
+    border: 1px solid black;
+}
+
+.main .bookList .cell div#header {
+    display: flex;
+    justify-content: center;
+}
+
