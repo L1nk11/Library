@@ -48,7 +48,8 @@ body {
     border-radius: 10px;
     color: white;
     font-size: 1.1rem;
-    min-width: fit-content;
+    min-width: 700px;
+
 }
 
 .cell {
@@ -63,6 +64,7 @@ body {
     border-bottom: 1px solid #CCC;
     border-right: 1px solid #CCC;
     padding: 0px 4px;
+    
 }
 
 .cell .tittle {
@@ -144,4 +146,31 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     background-color: #2A3545;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup form label#pageNumber {
+    white-space: nowrap;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.popup form label#pageNumber input {
+    width: 20%;
+}
+
+.popup form label#read {
+    flex-direction: row;
 }
