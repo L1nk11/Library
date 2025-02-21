@@ -3,32 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <title>Library</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Library</h1>
-        <button id="addBookButton">+ Add Book</button>
-    </div>
-    <div class="main">
-        <div class="bookList">
-            <div class="cell">
-                <div class="tittle" id="header">Tittle</div>
-                <div class="author" id="header">Author</div>
-                <div class="numberOfPages" id="header">N. of Pages</div>
-                <div class="read" id="header">Read</div>
-                <div class="remove" id="header"></div>
-            </div>
-            <div class="cell" id="first">
-                <div class="tittle">some tittle here</div>
-                <div class="author">some author name</div>
-                <div class="numberOfPages">N. of Pages</div>
-                <div class="read"><button>Read</button></div>
-                <div class="remove"><button>Remove</button></div>
-            </div>
+    <div class="content">
+        <div class="header">
+            <h1>Library</h1>
+            <button id="addBook">+</button>
         </div>
+    
+        <div class="sheet">
+            <div class="cell" id="first">
+                <div class="tittle" id="first">Tittle</div>
+                <div class="author" id="first">Author</div>
+                <div class="number-of-pages" id="first">Number of pages</div>
+                <div class="is-read" id="first">Readed?</div>
+                <div class="remove" id="first"></div>
+            </div>
+            <div class="cell">
+                <div class="tittle"></div>
+                <div class="author"></div>
+                <div class="number-of-pages"></div>
+                <div class="is-read">not read</div>
+                <div class="remove">Remove</div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup" id="popup">
+        <!-- form here -->
+        <h2>Add a new book</h2>
+        <form action="bookForm">
+            <label for="bookForm"> Tittle: <input type="text" id="tittle" required></label><br>
+            <label for="bookForm"> Author: <input type="text" id="author" required></label><br>
+            <label for="bookForm"> Number of Pages: <input type="number" id="pages" required></label><br>
+            <label for="bookForm" id="read"> Is it read? <input type="checkbox" id="read" required></label><br>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </body>
 </html>
