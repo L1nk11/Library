@@ -75,10 +75,34 @@ function updateList() {
         tittle.classList.add('tittle')
         tittle.textContent = Object.title
 
+        const author = document.createElement('div')
+        author.classList.add('author')
+        author.textContent = Object.author
+
+        const nPages = document.createElement('div')
+        nPages.classList.add('number-of-pages')
+        nPages.textContent = Object.pages
+
+        const read = document.createElement('div')
+        if (Object.isRead == true) {
+            read.classList.add('is-read')
+            read.textContent = "it's read"
+        } else {
+            read.classList.add('is-not-read')
+            read.textContent = "it's not read"
+        }
+
+        const remove = document.createElement('div')
+        remove.classList.add('remove')
+        remove.textContent = 'Delete'
+        
         cell.appendChild(tittle)
+        cell.appendChild(author)
+        cell.appendChild(nPages)
+        cell.appendChild(read)
+        cell.appendChild(remove)
         sheet.appendChild(cell)
     })
-
 }
 
 updateList()
