@@ -67,6 +67,7 @@ function updateList() {
         sheet.removeChild(sheet.lastChild)
     }
 
+    // get data from Library list, create elements, and add them to the list
     Library.forEach((Object, index) =>{
         const cell = document.createElement('div')
         cell.classList.add('cell')
@@ -101,7 +102,7 @@ function updateList() {
                 Object.isRead = true
                 read.classList.replace('is-not-read', 'is-read')
             }
-            
+
             updateList()
         })
 
