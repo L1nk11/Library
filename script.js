@@ -84,6 +84,7 @@ function updateList() {
         nPages.textContent = Object.pages
 
         const read = document.createElement('div')
+        
         if (Object.isRead == true) {
             read.classList.add('is-read')
             read.textContent = "it's read"
@@ -92,9 +93,22 @@ function updateList() {
             read.textContent = "it's not read"
         }
 
+        read.addEventListener('click', () => {
+            if (Object.isRead == true) {
+                Object.isRead = false
+                read.classList.replace('is-read', 'is-not-read')
+            } else {
+                Object.isRead = true
+                read.classList.replace('is-not-read', 'is-read')
+            }
+            
+            updateList()
+        })
+
         const remove = document.createElement('div')
         remove.classList.add('remove')
         remove.textContent = 'Delete'
+        
         remove.addEventListener('click', () => {
             Library.splice(index, 1)
             updateList()
