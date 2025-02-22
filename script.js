@@ -21,6 +21,7 @@ const addBookButton = document.getElementById('addBook')
 const overlay = document.getElementById('overlay')
 const popUp = document.getElementById('popup')
 const bookForm = document.getElementById('bookForm')
+const sheet = document.getElementById('sheet')
 
 addBookButton.addEventListener('click', function() {
     overlay.style.display = 'block'
@@ -53,6 +54,31 @@ bookForm.addEventListener('submit', function(event) {
     bookForm.reset()
 
     // console.log(Library)
+
+    updateList()
 })
 
 // create function to add new cell
+
+function updateList() {
+    // remove all elements except the last one
+
+    while (sheet.children.length > 1) {
+        sheet.removeChild(sheet.lastChild)
+    }
+
+    Library.forEach(Object =>{
+        const cell = document.createElement('div')
+        cell.classList.add('cell')
+
+        const tittle = document.createElement('div')
+        tittle.classList.add('tittle')
+        tittle.textContent = Object.title
+
+        cell.appendChild(tittle)
+        sheet.appendChild(cell)
+    })
+
+}
+
+updateList()
