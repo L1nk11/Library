@@ -67,7 +67,7 @@ function updateList() {
         sheet.removeChild(sheet.lastChild)
     }
 
-    Library.forEach(Object =>{
+    Library.forEach((Object, index) =>{
         const cell = document.createElement('div')
         cell.classList.add('cell')
 
@@ -95,6 +95,10 @@ function updateList() {
         const remove = document.createElement('div')
         remove.classList.add('remove')
         remove.textContent = 'Delete'
+        remove.addEventListener('click', () => {
+            Library.splice(index, 1)
+            updateList()
+        })
         
         cell.appendChild(tittle)
         cell.appendChild(author)
